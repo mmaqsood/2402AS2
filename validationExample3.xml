@@ -1,0 +1,274 @@
+<?xml version = "1.0"?>
+<fakebookXML>
+
+  <song>
+     <title>500 Miles High</title>
+     <composer>Corea, Chick</composer>
+     <musicalStyle>Bossa Nova</musicalStyle>
+     <key>E-</key>
+     <tempo>240</tempo>
+     <bar>
+        <leftDoubleBarLine/>
+        <timeSignature>4/4</timeSignature>
+        <chords>E-7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <chords>G-7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <timeSignature>2/4</timeSignature>
+        <chords>Bb^7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <chords>Bh7</chords>
+     </bar>
+     <bar>
+        <chords>E7#9</chords>
+     </bar>
+     <bar>
+        <chords>A-7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <timeSignature>4/4</timeSignature>
+        <chords>F#h7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <chords>F-7</chords>
+     </bar>
+     <bar>
+        <coda/>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <chords>C-7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <timeSignature>2/4</timeSignature>
+        <chords>B7#9</chords>
+     </bar>
+     <bar>
+        <finalBarLine/>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <coda/>
+        <leftRepeat/>
+        <chords>C-7</chords>
+     </bar>
+     <bar>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+     <bar>
+        <chords>Ab^7</chords>
+     </bar>
+     <bar>
+        <rightRepeat/>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+  </song>
+  <song>
+     <title>502 Blues</title>
+     <composer>Rowles, Jimmy</composer>
+     <musicalStyle>Waltz</musicalStyle>
+     <key>A-</key>
+     <bar>
+        <leftRepeat/>
+        <timeSignature>3/4</timeSignature>
+        <chords>A-7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7</chords>
+     </bar>
+     <bar>
+        <chords>Bh7</chords>
+     </bar>
+        <chords>E7#9<bar>
+     </chords>
+     </bar>
+     <bar>
+        <chords>A-7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7</chords>
+     </bar>
+     <bar>
+        <chords>Bh7</chords>
+     </bar>
+     <bar>
+        <chords>E7#9</chords>
+     </bar>
+     <bar>
+        <chords>C-7</chords>
+     </bar>
+     <bar>
+        <chords>F7b9</chords>
+     </bar>
+     <bar>
+        <chords>Bb^7</chords>
+     </bar>
+     <bar>
+        <chords>Ab-7 Db7</chords>
+     </bar>
+     <bar>
+        <endings>1</endings>
+        <chords>F#h7</chords>
+     </bar>
+     <bar>
+        <chords>B7b9</chords>
+     </bar>
+     <bar>
+        <chords>E^7#5</chords>
+     </bar>
+     <bar>
+        <rightRepeat/>
+        <chords>E^7#5 E7</chords>
+     </bar>
+     <bar>
+        <endings>2</endings>
+        <chords>F#h7</chords>
+     </bar>
+     <bar>
+        <chords>B7b9</chords>
+     </bar>
+     <bar>
+        <chords>E-7</chords>
+     </bar>
+     <bar>
+        <finalBarLine/>
+        <phraseAbreviation>x</phraseAbreviation>
+     </bar>
+  </song>
+  <song>
+     <title>26-2</title>
+     <composer>Coltrane, John</composer>
+     <musicalStyle>Medium Up Swing</musicalStyle>
+     <key>F</key>
+     <bar>
+        <leftDoubleBarLine/>
+        <rehearsalLetter>A</rehearsalLetter>
+        <timeSignature>4/4</timeSignature>
+        <chords>F^7 Ab7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7 E7</chords>
+     </bar>
+     <bar>
+        <chords>A^7 C7</chords>
+     </bar>
+     <bar>
+        <chords>C-7 F7</chords>
+     </bar>
+     <bar>
+        <chords>Bb^7 Db7</chords>
+     </bar>
+     <bar>
+        <chords>Gb^7 A7</chords>
+     </bar>
+     <bar>
+        <chords>D-7 G7</chords>
+     </bar>
+     <bar>
+        <rightDoubleBarLine/>
+        <chords>G-7 C7</chords>
+     </bar>
+     <bar>
+        <leftDoubleBarLine/>
+        <rehearsalLetter>A</rehearsalLetter>
+        <chords>F^7 Ab7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7 E7</chords>
+     </bar>
+     <bar>
+        <chords>A^7 C7</chords>
+     </bar>
+     <bar>
+        <chords>C-7 F7</chords>
+     </bar>
+     <bar>
+        <chords>Bb^7 Ab7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7 E7</chords>
+     </bar>
+     <bar>
+        <chords>A^7 C7</chords>
+     </bar>
+     <bar>
+        <rightDoubleBarLine/>
+        <chords>F^7</chords>
+     </bar>
+     <bar>
+        <leftDoubleBarLine/>
+        <rehearsalLetter>B</rehearsalLetter>
+        <chords>C-7 F7</chords>
+     </bar>
+     <bar>
+        <chords>E-7 A7</chords>
+     </bar>
+     <bar>
+        <chords>D^7 F7</chords>
+     </bar>
+     <bar>
+        <chords>Bb^7</chords>
+     </bar>
+     <bar>
+        <chords>Eb-7</chords>
+     </bar>
+     <bar>
+        <chords>Ab7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7</chords>
+     </bar>
+     <bar>
+        <rightDoubleBarLine/>
+        <chords>G-7 C7</chords>
+     </bar>
+     <bar>
+        <leftDoubleBarLine/>
+        <rehearsalLetter>A</rehearsalLetter>
+        <chords>F^7 Ab7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7 E7</chords>
+     </bar>
+     <bar>
+        <chords>A^7 C7</chords>
+     </bar>
+     <bar>
+        <chords>C-7 F7</chords>
+     </bar>
+     <bar>
+        <chords>Bb^7 Ab7</chords>
+     </bar>
+     <bar>
+        <chords>Db^7 E7</chords>
+     </bar>
+     <bar>
+        <chords>A^7 C7</chords>
+     </bar>
+     <bar>
+        <finalBarLine/>
+        <chords>F^7</chords>
+     </bar>
+  </song>
+</fakebookXML>
