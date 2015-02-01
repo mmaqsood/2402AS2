@@ -28,6 +28,11 @@ import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
+import song_charts_2402.Bar.BarLine;
+import assignment2_2402.ArrayStack;
+import assignment2_2402.BoundedCapacityOverFlowException;
+import assignment2_2402.StackUnderflowException;
+
 public class ChartView extends JPanel implements MouseListener, MouseMotionListener{
  
 	//Represents the area where song data is displayed
@@ -100,6 +105,10 @@ public class ChartView extends JPanel implements MouseListener, MouseMotionListe
 	private JMenuItem insertBarBeforeMenuItem = new JMenuItem("Insert Bar Before");
 	private JMenuItem deleteBarMenuItem = new JMenuItem("Delete Bar");
 	
+	
+	private ArrayStack<Bar> barStack = new ArrayStack();
+	//This stack tells us which bars have already been repeated, so we're not stuck in the repeat loop
+	private ArrayStack<Bar> repeatedBarStack = new ArrayStack();
 	public void buildBarPopupMenu(){
 		
 		//left bar line sub menu
@@ -395,7 +404,7 @@ public class ChartView extends JPanel implements MouseListener, MouseMotionListe
 	}
 	
 	
-	public void advanceCurrentBar(){
+	public void advanceCurrentBar() {
 		//called in response to time event
 		//advance the current bar and the highlight box
 		
@@ -407,6 +416,30 @@ public class ChartView extends JPanel implements MouseListener, MouseMotionListe
 		//when paused or stopped.
 		
 		currentBar = songToView.getBarAfter(currentBar);
+		
+		try {
+			// Check for a right repeat. 
+			if (barStack.size() > 0 && barStack.top().getRightBarLine() == BarLine.RIGHT_REPEAT){
+				// We now need to find the left repeat and go back to that line.
+				Bar leftRepeatBar = findLeftPlayBarInStack();
+				
+				if (leftRepeatBar != null){
+					currentBar = leftRepeatBar;
+				}
+				
+			}
+		} catch (StackUnderflowException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		//Add to our stack
+		try {
+			barStack.push(currentBar);
+		} catch (BoundedCapacityOverFlowException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(currentBar.getTimeSignature()!= null && currentBar.getTimeSignature().length() > 0){
 			currentTimeSignature = currentBar.getTimeSignature();
 			setTimerDelay();
@@ -418,6 +451,7 @@ public class ChartView extends JPanel implements MouseListener, MouseMotionListe
         boxY = currentBar.getOriginY();     
         boxWidth = currentBar.getWidth();
 		boxHeight = currentBar.getHeight();
+		
 		
 	}
 	
@@ -571,6 +605,46 @@ public class ChartView extends JPanel implements MouseListener, MouseMotionListe
 		
     }
     
+    /*
+     * Helper function goes through our barStack to find a matching
+     * left repeat for an occuring right repeat.
+     */
+    private Bar findLeftPlayBarInStack(){
+    	//We move back to our left repeat bar.
+		Bar leftRepeatBar = null;
+		while (barStack.size() > 0){
+			try {
+				if (barStack.top().getLeftBarLine() == Bar.BarLine.LEFT_REPEAT){
+					leftRepeatBar = barStack.pop();
+				}
+				else {
+					barStack.pop();
+				}
+			} catch (StackUnderflowException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		if (leftRepeatBar != null){
+			
+			try {
+				if (repeatedBarStack.size() > 0 && repeatedBarStack.top().toString().equals(leftRepeatBar.toString())){
+					//Ignore this repeat
+					leftRepeatBar = null;
+					repeatedBarStack.pop();
+				}
+				else{
+					//Add the current bar to the repeat list, we don't want to loop endlessly
+					repeatedBarStack.push(leftRepeatBar);
+				}
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+		return leftRepeatBar;
+    }
 
 
 }

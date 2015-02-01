@@ -8,63 +8,6 @@
      <key>E-</key>
      <tempo>240</tempo>
      <bar>
-        <leftDoubleBarLine/>
-        <timeSignature>4/4</timeSignature>
-        <chords>E-7</chords>
-     </bar>
-     <bar>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <chords>G-7</chords>
-     </bar>
-     <bar>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <timeSignature>2/4</timeSignature>
-        <chords>Bb^7</chords>
-     </bar>
-     <bar>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <chords>Bh7</chords>
-     </bar>
-     <bar>
-        <chords>E7#9</chords>
-     </bar>
-     <bar>
-        <chords>A-7</chords>
-     </bar>
-     <bar>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <timeSignature>4/4</timeSignature>
-        <chords>F#h7</chords>
-     </bar>
-     <bar>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <chords>F-7</chords>
-     </bar>
-     <bar>
-        <coda/>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <chords>C-7</chords>
-     </bar>
-     <bar>
-        <phraseAbreviation>x</phraseAbreviation>
-     </bar>
-     <bar>
-        <timeSignature>2/4</timeSignature>
-        <chords>B7#9</chords>
-     </bar>
-     <bar>
         <finalBarLine/>
         <phraseAbreviation>x</phraseAbreviation>
      </bar>
