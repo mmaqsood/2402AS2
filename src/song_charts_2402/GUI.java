@@ -7,9 +7,11 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.*;
+
+import assignment2_2402.Validator;
+
 import java.util.*;
 import java.io.*;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -36,6 +38,7 @@ public class GUI extends JFrame implements ActionListener{
 	private JMenuItem		openFileItem = new JMenuItem("Open XML File");    
 	private JMenuItem		exportXMLItem = new JMenuItem("Export XML");    
 	private JMenuItem		newSongItem = new JMenuItem("New Blank Song");    
+	private JMenuItem		validateXMLItem = new JMenuItem("Validate an XML File");    
 	
 	private JMenuItem		playItem = new JMenuItem("Play");    
 	private JMenuItem		pauseItem = new JMenuItem("Pause");    
@@ -89,10 +92,12 @@ public class GUI extends JFrame implements ActionListener{
 		fileMenu.add(openFileItem);
 		fileMenu.add(exportXMLItem);
 		fileMenu.add(newSongItem);
+		fileMenu.add(validateXMLItem);
 		
 		openFileItem.addActionListener(this);
 		exportXMLItem.addActionListener(this);
 		newSongItem.addActionListener(this);
+		validateXMLItem.addActionListener(this);
 
 		//PLAY MENU
 		aMenuBar.add(playMenu);
@@ -250,6 +255,17 @@ public class GUI extends JFrame implements ActionListener{
 		}
 		else if(e.getSource() == t240Item){
 			chartView.setTempo(240);		    
+		}
+		else if(e.getSource() == validateXMLItem){
+			File dataFile = getInputFile();
+		    boolean result = Validator.validate(dataFile);
+		    
+		    if (result){
+		    	JOptionPane.showMessageDialog(null,"Passed Validation","XML Validation",JOptionPane.WARNING_MESSAGE);
+		    }
+		    else {
+		    	JOptionPane.showMessageDialog(null,"Failed Validation","XML Validation",JOptionPane.WARNING_MESSAGE);
+		    }
 		}
 		
 		update();
