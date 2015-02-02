@@ -354,22 +354,32 @@ public class ChartView extends JPanel implements MouseListener, MouseMotionListe
 	}
 	
 	private void setTimerDelay(){
-	 
+		 
 	    boolean wasRunning = timer.isRunning(); //remember whether timer was running
 		
 		timer.stop(); 
+		int timerDelay = timer.getDelay(); //save old timer delay
+		int initialDelay = timer.getInitialDelay(); //save old initial delay
 		
 		String tempoString = songToView.getTempo();
-		int tempo = Integer.parseInt(tempoString);		
-		int barsPerMinute =  tempo / 4; //default assume 4/4 time
-		if(currentTimeSignature != null && currentTimeSignature.length()>0){
-			int indexOfSlash = currentTimeSignature.indexOf('/');
-			int beatsPerBar = Integer.parseInt(currentTimeSignature.substring(0,indexOfSlash));
-			barsPerMinute = tempo/beatsPerBar;
+		try{
+		   int tempo = Integer.parseInt(tempoString);		
+		   int barsPerMinute =  tempo / 4; //default assume 4/4 time
+		   if(currentTimeSignature != null && currentTimeSignature.length()>0){
+			   int indexOfSlash = currentTimeSignature.indexOf('/');
+			   int beatsPerBar = Integer.parseInt(currentTimeSignature.substring(0,indexOfSlash));
+			   barsPerMinute = tempo/beatsPerBar;
+		   }
+		   int millsecondsPerBar = 1000*60/barsPerMinute;
+		   timerDelay = millsecondsPerBar;
+		   initialDelay = millsecondsPerBar;
+		
+		} //try
+		catch (NumberFormatException e){
+			
 		}
-		int millsecondsPerBar = 1000*60/barsPerMinute;
-		timer.setInitialDelay(millsecondsPerBar); //delay from first start
-		timer.setDelay(millsecondsPerBar); //delay between events
+		timer.setInitialDelay(initialDelay); //delay from first start
+		timer.setDelay(timerDelay); //delay between events
 		if(wasRunning) timer.start();
 		
 	}
